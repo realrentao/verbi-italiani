@@ -108,7 +108,7 @@ MODELS = {
         imp=["", "di'", "dica", "diciamo", "dite", "dicano"],
         ger="dicendo", ppr="dicente", pp="detto"),
     "bere": dict(pres=["bevo", "bevi", "beve", "beviamo", "bevete", "bevono"],
-        imperf=["bevevo", "bevevi", "beveva", "bevamo", "bevate", "bevevano"],
+        imperf=["bevevo", "bevevi", "beveva", "bevevamo", "bevevate", "bevevano"],
         remoto=["bevvi", "bevesti", "bevve", "bevemmo", "beveste", "bevvero"],
         fut=["berrò", "berrai", "berrà", "berremo", "berrete", "berranno"],
         cond=["berrei", "berresti", "berrebbe", "berremmo", "berreste", "berrebbero"],
@@ -139,13 +139,13 @@ MODELS = {
         remoto=["dovetti", "dovesti", "dovette", "dovemmo", "doveste", "dovettero"],
         fut=["dovrò", "dovrai", "dovrà", "dovremo", "dovrete", "dovranno"],
         cond=["dovrei", "dovresti", "dovrebbe", "dovremmo", "dovreste", "dovrebbero"],
-        subj_pres=["debba", "debba", "debba", "dobbiamo", "dobbiate", "debbano"],
+        subj_pres=["deva", "deva", "deva", "dobbiamo", "dobbiate", "debbano"],
         subj_imperf=["dovessi", "dovessi", "dovesse", "dovessimo", "doveste", "dovessero"],
         imp=["", "—", "—", "—", "—", "—"],
         ger="dovendo", ppr="dovente", pp="dovuto"),
     "potere": dict(pres=["posso", "puoi", "può", "possiamo", "potete", "possono"],
         imperf=["potevo", "potevi", "poteva", "potevamo", "potevate", "potevano"],
-        remoto=["potei", "potesti", "poté", "potemmo", "poteste", "poterono"],
+        remoto=["potetti", "potesti", "potette", "potemmo", "poteste", "potettero"],
         fut=["potrò", "potrai", "potrà", "potremo", "potrete", "potranno"],
         cond=["potrei", "potresti", "potrebbe", "potremmo", "potreste", "potrebbero"],
         subj_pres=["possa", "possa", "possa", "possiamo", "possiate", "possano"],
@@ -205,7 +205,7 @@ MODELS = {
         subj_pres=["salga", "salga", "salga", "saliamo", "saliate", "salgano"],
         subj_imperf=["salissi", "salissi", "salisse", "salissimo", "saliste", "salissero"],
         imp=["", "sali", "salga", "saliamo", "salite", "salgano"],
-        ger="salendo", ppr="salente", pp="salito"),
+        ger="salendo", ppr="saliente", pp="salito"),
     "morire": dict(pres=["muoio", "muori", "muore", "moriamo", "morite", "muoiono"],
         imperf=["morivo", "morivi", "moriva", "morivamo", "morivate", "morivano"],
         remoto=["morii", "moristi", "morì", "morimmo", "moriste", "morirono"],
@@ -393,9 +393,9 @@ MODELS = {
         imperf=["spegnevo", "spegnevi", "spegneva", "spegnevamo", "spegnevate", "spegnevano"],
         remoto=["spensi", "spegnesti", "spense", "spegnemmo", "spegneste", "spensero"],
         fut=["spegnerò", "spegnerai", "spegnerà", "spegneremo", "spegnerete", "spegneranno"],
-        cond=["spernerei", "sperneresti", "spernerebbe", "sperneremmo", "spernereste", "spernerebbero"],
+        cond=["spegnerei", "spegneresti", "spegnerebbe", "spegneremmo", "spegnereste", "spegnerebbero"],
         subj_pres=["spenga", "spenga", "spenga", "spegniamo", "spegniate", "spengano"],
-        subj_imperf=["spegnassi", "spegnassi", "spegnasse", "spegnassimo", "spegnaste", "spegnassero"],
+        subj_imperf=["spegnessi", "spegnessi", "spegnesse", "spegnessimo", "spegneste", "spegnessero"],
         imp=["", "spegni", "spenga", "spegniamo", "spegnete", "spengano"],
         ger="spegnendo", ppr="spegnente", pp="spento"),
     "valere": dict(pres=["valgo", "vali", "vale", "valiamo", "valete", "valgono"],
@@ -415,7 +415,7 @@ MODELS = {
         subj_pres=["paia", "paia", "paia", "paiamo", "paiate", "paiano"],
         subj_imperf=["paressi", "paressi", "paresse", "paressimo", "pareste", "paressero"],
         imp=["", "—", "—", "—", "—", "—"],
-        ger="parendo", ppr="parvente", pp="parso"),
+        ger="parendo", ppr="parente", pp="parso"),
     "piacere": dict(pres=["piaccio", "piaci", "piace", "piacciamo", "piacete", "piacciono"],
         imperf=["piacevo", "piacevi", "piaceva", "piacevamo", "piacevate", "piacevano"],
         remoto=["piacqui", "piacesti", "piacque", "piacemmo", "piaceste", "piacquero"],
@@ -469,7 +469,7 @@ MODELS = {
     "vedere": dict(remoto=["vidi", "vedesti", "vide", "vedemmo", "vedeste", "videro"],
         fut=["vedrò", "vedrai", "vedrà", "vedremo", "vedrete", "vedranno"],
         cond=["vedrei", "vedresti", "vedrebbe", "vedremmo", "vedreste", "vedrebbero"],
-        pp="visto"),
+        pp="veduto"),
     "chiedere": dict(remoto=["chiesi", "chiedesti", "chiese", "chiedemmo", "chiedeste", "chiesero"], pp="chiesto"),
     "prendere": dict(remoto=["presi", "prendesti", "prese", "prendemmo", "prendeste", "presero"], pp="preso"),
     "rispondere": dict(remoto=["risposi", "rispondesti", "rispose", "rispondemmo", "rispondeste", "risposero"], pp="risposto"),
@@ -483,6 +483,8 @@ MODELS = {
     "correre": dict(remoto=["corsi", "corresti", "corse", "corremmo", "correste", "corsero"], pp="corso"),
     "perdere": dict(remoto=["persi", "perdesti", "perse", "perdemmo", "perdeste", "persero"], pp="perso"),
     "mettere": dict(remoto=["misi", "mettesti", "mise", "mettemmo", "metteste", "misero"], pp="messo"),
+    "emettere": dict(remoto=["emisi", "emettesti", "emise", "emettemmo", "emetteste", "emisero"], pp="emesso"),
+    "ardere": dict(remoto=["arsi", "ardesti", "arse", "ardemmo", "ardeste", "arsero"], pp="arso"),
     "vivere": dict(remoto=["vissi", "vivesti", "visse", "vivemmo", "viveste", "vissero"],
         fut=["vivrò", "vivrai", "vivrà", "vivremo", "vivrete", "vivranno"],
         cond=["vivrei", "vivresti", "vivrebbe", "vivremmo", "vivreste", "vivrebbero"],
@@ -500,7 +502,9 @@ MODELS = {
     "soffrire": dict(remoto=["soffrii", "soffristi", "soffrì", "soffrimmo", "soffriste", "soffrirono"], pp="sofferto"),
     "coprire": dict(remoto=["coprii", "copristi", "coprì", "coprimmo", "copriste", "coprirono"], pp="coperto"),
     "scoprire": dict(remoto=["scoprii", "scopristi", "scoprì", "scoprimmo", "scopriste", "scoprirono"], pp="scoperto"),
-    "cuocere": dict(remoto=["cossi", "cuocesti", "cosse", "cuocemmo", "cuoceste", "cossero"], pp="cotto"),
+    "cuocere": dict(pres=["cuocio", "cuoci", "cuoce", "cuociamo", "cuocete", "cuociono"],
+        subj_pres=["cuocia", "cuocia", "cuocia", "cuociamo", "cuociate", "cuociano"],
+        remoto=["cossi", "cuocesti", "cosse", "cuocemmo", "cuoceste", "cossero"], pp="cotto"),
     "scuotere": dict(remoto=["scossi", "scuotesti", "scosse", "scuotemmo", "scuoteste", "scossero"], pp="scosso"),
     "discutere": dict(remoto=["discussi", "discutesti", "discusse", "discutemmo", "discuteste", "discussero"], pp="discusso"),
     "succedere": dict(remoto=["successi", "succedesti", "successe", "succedemmo", "succedeste", "successero"], pp="successo"),
@@ -510,6 +514,34 @@ MODELS = {
         cond=["cadrei", "cadresti", "cadrebbe", "cadremmo", "cadreste", "cadrebbero"],
         pp="caduto"),
     "esprimere": dict(remoto=["espressi", "esprimesti", "espresse", "esprimemmo", "esprimeste", "espressero"], pp="espresso"),
+    "comprimere": dict(pres=["comprimo", "comprimi", "comprime", "comprimiamo", "comprimete", "comprimono"],
+        subj_pres=["comprima", "comprima", "comprima", "comprimiamo", "comprimiate", "comprimano"],
+        remoto=["compressi", "comprimesti", "compresse", "comprimemmo", "comprimeste", "compressero"], pp="compresso"),
+    "reprimere": dict(pres=["reprimo", "reprimi", "reprime", "reprimiamo", "reprimete", "reprimono"],
+        subj_pres=["reprima", "reprima", "reprima", "reprimiamo", "reprimiate", "reprimano"],
+        remoto=["repressi", "reprimesti", "represse", "reprimemmo", "reprimeste", "repressero"], pp="represso"),
+    "sopprimere": dict(pres=["sopprimo", "sopprimi", "sopprime", "sopprimiamo", "sopprimete", "sopprimono"],
+        subj_pres=["sopprima", "sopprima", "sopprima", "sopprimiamo", "sopprimiate", "sopprimano"],
+        remoto=["soppressi", "sopprimesti", "soppresse", "sopprimemmo", "sopprimeste", "soppressero"], pp="soppresso"),
+    "concedere": dict(remoto=["concessi", "concedesti", "concesse", "concedemmo", "concedeste", "concessero"], pp="concesso"),
+    "benedire": dict(pres=["benedico", "benedici", "benedice", "benediciamo", "benedite", "benedicono"],
+        imperf=["benedicevo", "benedicevi", "benediceva", "benedicevamo", "benedicevate", "benedicevano"],
+        remoto=["benedissi", "benedicesti", "benedisse", "benedicemmo", "benediceste", "benedissero"],
+        fut=["benedirò", "benedirai", "benedirà", "benediremo", "benedirete", "benediranno"],
+        cond=["benedirei", "benediresti", "benedirebbe", "benediremmo", "benedireste", "benedirebbero"],
+        subj_pres=["benedica", "benedica", "benedica", "benediciamo", "benediciate", "benedicano"],
+        subj_imperf=["benedicessi", "benedicessi", "benedicesse", "benedicessimo", "benediceste", "benedicessero"],
+        imp=["", "benedici", "benedica", "benediciamo", "benedite", "benedicano"],
+        ger="benedicendo", ppr="benedicente", pp="benedetto"),
+    "maledire": dict(pres=["maledico", "maledici", "maledice", "malediciamo", "maledite", "maledicono"],
+        imperf=["maledicevo", "maledicevi", "malediceva", "maledicevamo", "maledicevate", "maledicevano"],
+        remoto=["maledissi", "maledicesti", "maledisse", "maledicemmo", "malediceste", "maledissero"],
+        fut=["maledirò", "maledirai", "maledirà", "malediremo", "maledirete", "malediranno"],
+        cond=["maledirei", "malediresti", "maledirebbe", "malediremmo", "maledireste", "maledirebbero"],
+        subj_pres=["maledica", "maledica", "maledica", "malediciamo", "malediciate", "maledicano"],
+        subj_imperf=["maledicessi", "maledicessi", "maledicesse", "maledicessimo", "malediceste", "maledicessero"],
+        imp=["", "maledici", "maledica", "malediciamo", "maledite", "maledicano"],
+        ger="maledicendo", ppr="maledicente", pp="maledetto"),
     "spingere": dict(remoto=["spinsi", "spingesti", "spinse", "spingemmo", "spingeste", "spinsero"], pp="spinto"),
     "stringere": dict(remoto=["strinsi", "stringesti", "strinse", "stringemmo", "stringeste", "strinsero"], pp="stretto"),
     "aggiungere": dict(remoto=["aggiunsi", "aggiungesti", "aggiunse", "aggiungemmo", "aggiungeste", "aggiunsero"], pp="aggiunto"),
@@ -548,7 +580,7 @@ MODELS = {
     "percuotere": dict(remoto=["percossi", "percuotesti", "percosse", "percuotemmo", "percuoteste", "percossero"], pp="percosso"),
     "riscuotere": dict(remoto=["riscossi", "riscuotesti", "riscosse", "riscuotemmo", "riscuoteste", "riscossero"], pp="riscosso"),
     "mordere": dict(remoto=["morsi", "mordesti", "morse", "mordemmo", "mordeste", "morsero"], pp="morso"),
-    "prescindere": dict(remoto=["prescinsi", "prescindesti", "prescinse", "prescindemmo", "prescindeste", "prescinsero"], pp="prescisso"),
+    "prescindere": dict(remoto=["prescindei", "prescindesti", "prescindé", "prescindemmo", "prescindeste", "prescinderono"], pp="prescisso"),
     "apparire": dict(pres=["appaio", "appari", "appare", "appariamo", "apparite", "appaiono"],
         subj_pres=["appaia", "appaia", "appaia", "appariamo", "appariate", "appaiano"],
         remoto=["apparsi", "apparisti", "apparse", "apparimmo", "appariste", "apparsero"], pp="apparso"),
@@ -558,6 +590,24 @@ MODELS = {
     "scomparire": dict(pres=["scompaio", "scompari", "scompare", "scompariamo", "scomparite", "scompaiono"],
         subj_pres=["scompaia", "scompaia", "scompaia", "scompariamo", "scompariate", "scompaiano"],
         remoto=["scomparsi", "scomparisti", "scomparse", "scomparimmo", "scompariste", "scomparvero"], pp="scomparso"),
+    # ---- 含 e→ie 词干交替 / 不规则 remoto + pp 的 -ere 动词 ----
+    "pendere": dict(remoto=["pesi", "pendesti", "pese", "pendemmo", "pendeste", "pesero"], pp="peso"),
+    "riflettere": dict(remoto=["riflettei", "riflettesti", "rifletté", "riflettemmo", "rifletteste", "rifletterono"], pp="riflesso"),
+    "smettere": dict(remoto=["smisi", "smettesti", "smise", "smettemmo", "smetteste", "smisero"], pp="smesso"),
+    "sorridere": dict(remoto=["sorrisi", "sorridesti", "sorrise", "sorridemmo", "sorrideste", "sorrisero"], pp="sorriso"),
+    "evolvere": dict(remoto=["evolvei", "evolvesti", "evolvé", "evolvemmo", "evolveste", "evolverono"]),
+    "possedere": dict(pres=["possiedo", "possiedi", "possiede", "possediamo", "possedete", "possiedono"],
+        subj_pres=["possieda", "possieda", "possieda", "possediamo", "possediate", "possiedano"],
+        imp=["", "possiedi", "possieda", "possediamo", "possedete", "possiedano"],
+        remoto=["possedei", "possedesti", "possedé", "possedemmo", "possedeste", "possederono"], pp="posseduto"),
+    # ---- -iare 混合型：1-3 单数双 i，但 3 复数去 i（odino/varino）----
+    "odiare": dict(pres=["odio", "odii", "odia", "odiamo", "odiate", "odiano"],
+        subj_pres=["odii", "odii", "odii", "odiamo", "odiate", "odino"],
+        imp=["", "odia", "odii", "odiamo", "odiate", "odino"]),
+    "variare": dict(pres=["vario", "varii", "varia", "variamo", "variate", "variano"],
+        subj_pres=["varii", "varii", "varii", "variamo", "variate", "varino"],
+        imp=["", "varia", "varii", "variamo", "variate", "varino"]),
+
 }
 
 # ---------------------------------------------------------------------------
@@ -639,8 +689,8 @@ add(
     V("predire", "预言", aux="a", b="dire"),
     V("disdire", "取消", aux="a", b="dire"),
     V("ridire", "重说", aux="a", b="dire"),
-    V("benedire", "祝福", aux="a", b="dire", pp="benedetto"),
-    V("maledire", "诅咒", aux="a", b="dire", pp="maledetto"),
+    V("benedire", "祝福", aux="a", b="benedire"),
+    V("maledire", "诅咒", aux="a", b="maledire"),
     V("comporre", "组成/创作", aux="a", b="porre"),
     V("proporre", "提议", aux="a", b="porre"),
     V("imporre", "强加", aux="a", b="porre"),
@@ -669,8 +719,8 @@ add(
     V("riprodurre", "复制", aux="a", b="riprodurre"),
     V("ricondurre", "带回", aux="a", b="ricondurre"),
     V("addurre", "提出", aux="a", b="addurre"),
-    V("rivedere", "再看", aux="a", b="vedere"),
-    V("prevedere", "预见", aux="a", b="vedere"),
+    V("rivedere", "再看", aux="a", b="vedere", x="ri"),
+    V("prevedere", "预见", aux="a", b="vedere", x="pre"),
     V("provvedere", "供应", aux="a", b="vedere", x="prov"),
     V("intravedere", "瞥见", aux="a", b="vedere"),
     V("descrivere", "描述", aux="a", b="scrivere"),
@@ -706,9 +756,9 @@ add(
     V("riaccendere", "重新点燃", aux="a", b="accendere"),
     V("sospendere", "暂停", aux="a", b="spendere"),
     V("riaprire", "重新打开", aux="a", b="aprire"),
-    V("comprimere", "压缩", aux="a", b="esprimere"),
-    V("reprimere", "镇压", aux="a", b="esprimere"),
-    V("sopprimere", "废除", aux="a", b="esprimere"),
+    V("comprimere", "压缩", aux="a", b="comprimere"),
+    V("reprimere", "镇压", aux="a", b="reprimere"),
+    V("sopprimere", "废除", aux="a", b="sopprimere"),
     V("concludere", "结束", aux="a", b="concludere"),
     V("escludere", "排除", aux="a", b="escludere"),
     V("includere", "包括", aux="a", b="includere"),
@@ -781,7 +831,7 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("chiacchierare", "聊天"), ("commentare", "评论"), ("creare", "创造"), ("coltivare", "耕种"), ("lasciare", "留下", "sciare"),
     ("disegnare", "画"), ("entrare", "进入", "", "e"), ("spiegare", "解释", "gare"), ("firmare", "签名"),
     ("galleggiare", "漂浮", "giare"), ("formare", "形成"), ("funzionare", "运转"), ("gridare", "喊叫"), ("abitare", "居住"),
-    ("ignorare", "忽视"), ("tentare", "试图"), ("inventare", "发明"), ("limitare", "限制"), ("riempire", "填满"),
+    ("ignorare", "忽视"), ("tentare", "试图"), ("inventare", "发明"), ("limitare", "限制"), ("riempire", "填满", "isc"),
     ("lottare", "斗争"), ("segnare", "标记"), ("migliorare", "改善"), ("mescolare", "混合"), ("raccontare", "讲述"),
     ("notare", "注意"), ("occupare", "占据"), ("dimenticare", "忘记", "care"), ("operare", "操作"), ("fermare", "停"),
     ("pettinare", "梳"), ("bruciare", "燃烧", "ciare"), ("pregare", "祈祷", "gare"), ("ruotare", "旋转"), ("separare", "分开"),
@@ -793,15 +843,15 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("spaventare", "惊吓"), ("avvisare", "通知"), ("bloccare", "封锁", "care"), ("ricamare", "刺绣"), ("cavalcare", "骑马", "care"),
     ("calmare", "使平静"), ("stancare", "使累", "care"), ("catturare", "捕捉"), ("confrontare", "比较"), ("continuare", "继续"),
     ("urtare", "碰撞"), ("provare", "尝试"), ("riposare", "休息"), ("esaminare", "检查"), ("scavare", "挖"),
-    ("mancare", "缺少", "", "e"), ("fabbricare", "制造", "care"), ("facilitare", "促进"), ("frenare", "刹车"),
+    ("mancare", "缺少", "care", "e"), ("fabbricare", "制造", "care"), ("facilitare", "促进"), ("frenare", "刹车"),
     ("immaginare", "想象"), ("importare", "重要"), ("indicare", "指示", "care"), ("gonfiare", "充气"), ("informare", "通知"),
-    ("iniziare", "开始", "ciare"), ("insultare", "侮辱"), ("invitare", "邀请"), ("irritare", "激怒"), ("giurare", "发誓"),
+    ("iniziare", "开始"), ("insultare", "侮辱"), ("invitare", "邀请"), ("irritare", "激怒"), ("giurare", "发誓"),
     ("giustificare", "证明", "care"), ("localizzare", "定位"), ("alzare", "抬起"), ("guidare", "驾驶"), ("manipolare", "操纵"),
     ("marciare", "行进", "ciare"), ("menzionare", "提及"), ("bagnare", "弄湿"), ("disturbare", "打扰"),
     ("moltiplicare", "乘", "care"), ("mormorare", "低语"), ("navigare", "航行", "gare"), ("notificare", "通知", "care"),
-    ("numerare", "编号"), ("odiare", "憎恨"), ("ordinare", "命令"), ("originare", "产生"), ("oscillare", "摆动"),
+    ("numerare", "编号"), ("ordinare", "命令"), ("originare", "产生"), ("oscillare", "摆动"),
     ("peccare", "犯罪", "care"), ("pelare", "剥皮"), ("calpestare", "踩"), ("stirare", "熨烫"), ("premiare", "奖励"),
-    ("provocare", "挑衅", "care"), ("pubblicare", "出版", "care"), ("purificare", "净化", "care"), ("raschiare", "刮", "sciare"),
+    ("provocare", "挑衅", "care"), ("pubblicare", "出版", "care"), ("purificare", "净化", "care"), ("raschiare", "刮"),
     ("graffiare", "划"), ("rimbalzare", "反弹"), ("ritagliare", "裁剪"), ("riformare", "改革"), ("contrattare", "讨价还价"),
     ("registrare", "登记"), ("regolare", "调节"), ("collegare", "联系", "gare"), ("ripassare", "复习"), ("scivolare", "滑倒", "", "e"),
     ("rispettare", "尊重"), ("sfidare", "挑战"), ("ritirare", "撤退"), ("rivelare", "揭示"), ("circondare", "环绕"),
@@ -809,7 +859,7 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("simboleggiare", "象征", "giare"), ("sottolineare", "下划线"), ("sospirare", "叹气"), ("tastare", "试探"), ("tatuare", "纹身"),
     ("esitare", "犹豫"), ("scontrare", "碰撞"), ("totalizzare", "总计"), ("ostacolare", "阻碍"), ("trasformare", "转变"),
     ("transitare", "通行", "", "e"), ("troncare", "截断", "care"), ("rovesciare", "推倒", "ciare"), ("unificare", "统一", "care"),
-    ("svuotare", "清空"), ("convalidare", "验证"), ("variare", "变化"), ("vegliare", "守护"), ("vetare", "否决"),
+    ("svuotare", "清空"), ("convalidare", "验证"), ("vegliare", "守护"), ("vetare", "否决"),
     ("sorvegliare", "监视"), ("votare", "投票"), ("salpare", "起航", "", "e"), ("affondare", "沉没", "", "e"), ("ronzare", "嗡嗡响"),
     ("sognare", "做梦"), ("incontrare", "遇见"), ("mostrare", "展示"), ("ricordare", "记得"), ("tornare", "回来", "", "e"),
     ("restare", "留下", "", "e"), ("pensare", "思考"), ("mangiare", "吃", "giare"), ("giocare", "玩", "care"),
@@ -832,8 +882,8 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("pranzare", "吃午饭"), ("praticare", "练习", "care"), ("prenotare", "预订"), ("presentare", "介绍"),
     ("progettare", "设计"), ("promettere", "承诺"), ("pronunciare", "发音", "ciare"), ("protestare", "抗议"), ("pubblicare", "出版", "care"),
     ("raccomandare", "推荐"), ("raffreddare", "冷却"), ("ragionare", "推理"), ("respirare", "呼吸"),
-    ("riparare", "修理"), ("rischiare", "冒险", "sciare"), ("risparmiare", "节省"), ("ritornare", "返回", "", "e"), ("rubare", "偷"),
-    ("sbarcare", "下船", "care", "", "e"), ("sbagliare", "弄错"), ("scambiare", "交换", "ciare"), ("scappare", "逃跑", "", "e"),
+    ("riparare", "修理"), ("rischiare", "冒险"), ("risparmiare", "节省"), ("ritornare", "返回", "", "e"), ("rubare", "偷"),
+    ("sbarcare", "下船", "care", "", "e"), ("sbagliare", "弄错"), ("scambiare", "交换"), ("scappare", "逃跑", "", "e"),
     ("scherzare", "开玩笑"), ("scopare", "扫"), ("scusare", "原谅"), ("sembrare", "似乎", "", "e"),
     ("significare", "意味着", "care"), ("sperare", "希望"), ("spiegare", "解释", "gare"), ("sposare", "结婚"), ("squillare", "响铃"),
     ("stampare", "印刷"), ("superare", "超过"), ("svegliare", "唤醒"), ("sviluppare", "发展"), ("tagliare", "切"),
@@ -853,15 +903,18 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("xilografare", "木刻/木版印刷"), ("xerocopiare", "复印"), ("xerografare", "静电复印"),
     ("yogare", "练瑜伽"),
 ]])
+# --- -iare 混合型（1-3 单数双 i，3 复数去 i）需显式模型 ---
+add(V("odiare", "憎恨", aux="a", b="odiare"),
+    V("variare", "变化", aux="a", b="variare"))
 
 # --- 规则 -ere ---
-add(*[V(w[0], w[1], "a") for w in [
+add(*[V(w[0], w[1], w[3] if len(w) > 3 else "a", w[2] if len(w) > 2 else "", b=w[4] if len(w) > 4 else "") for w in [
     ("temere", "害怕"), ("credere", "相信"), ("ricevere", "收到"), ("vendere", "卖"), ("battere", "击打"),
     ("ripetere", "重复"), ("tessere", "编织"), ("premere", "按压"), ("cedere", "让步"), ("splendere", "发光"),
-    ("pendere", "悬挂"), ("assistere", "出席"), ("esistere", "存在", "", "e"), ("consistere", "在于", "", "e"),
-    ("insistere", "坚持"), ("resistere", "抵抗"), ("sorridere", "微笑"), ("mietere", "收割"), ("concedere", "授予"),
-    ("procedere", "进行", "", "e"), ("eccedere", "超过"), ("possedere", "拥有"), ("ardere", "燃烧"), ("riflettere", "反射/思考"),
-    ("smettere", "停止"), ("emettere", "发出"), ("soccombere", "屈服"), ("prescindere", "撇开"), ("evolvere", "进化"),
+    ("pendere", "悬挂", "", "a", "pendere"), ("assistere", "出席"), ("esistere", "存在", "", "e"), ("consistere", "在于", "", "e"),
+    ("insistere", "坚持"), ("resistere", "抵抗"), ("sorridere", "微笑", "", "a", "sorridere"), ("mietere", "收割"), ("concedere", "授予", "", "a", "concedere"),
+    ("procedere", "进行", "", "e"), ("eccedere", "超过"), ("possedere", "拥有", "", "a", "possedere"), ("ardere", "燃烧", "", "a", "ardere"), ("riflettere", "反射/思考", "", "a", "riflettere"),
+    ("smettere", "停止", "", "a", "smettere"), ("emettere", "发出", "", "a", "emettere"), ("soccombere", "屈服"), ("prescindere", "撇开", "", "a", "prescindere"), ("evolvere", "进化", "", "a", "evolvere"),
     ("assistere", "协助"), ("consistere", "在于"), ("desistere", "放弃"), ("esistere", "存在"), ("insistere", "坚持"),
     ("persistere", "坚持", "", "e"), ("resistere", "抵抗"), ("sussistere", "存在", "", "e"), ("bere", "喝"),
 ]])
@@ -913,6 +966,35 @@ for v in VERBS:
     seen.add(v["i"])
     FINAL.append(v)
 VERBS = FINAL
+
+# 现在分词/过去分词 个别修正（引擎默认规则生成的错误形）
+_PPR_PP_FIX = {
+    "sentire": dict(ppr="senziente"),
+    "riempire": dict(ppr="riempiente"),   # the-conjugation.com 对 -isc 现分多为 -ente，但 riempire 标 -iente，跟随参考站
+    "assentire": dict(ppr="assenziente"),
+    "consentire": dict(ppr="consenziente"),
+    "dissentire": dict(ppr="dissenziente"),
+    "presentire": dict(ppr="presenziente"),
+    "sapere": dict(ppr="-"),           # sapere 无现在分词（参考站标 -）
+    "assistere": dict(pp="assistito"),
+    "esistere": dict(pp="esistito"),
+    "insistere": dict(pp="insistito"),
+    "consistere": dict(pp="consistito"),
+    "desistere": dict(pp="desistito"),
+    "persistere": dict(pp="persistito"),
+    "resistere": dict(pp="resistito"),
+    "sussistere": dict(pp="sussistito"),
+    "evolvere": dict(pp="evoluto"),
+    "godere": dict(ppr="gaudente"),
+    "intravedere": dict(pp="veduto"),   # 前缀 intra 由 x 自动计算，pp 这里只填词根 veduto
+    "pervertire": dict(ppr="perverziente"),
+    "sovvertire": dict(ppr="sovverziente"),
+    "splendere": dict(pp="-"),         # splendere 分词罕见（参考站标 -）
+    "dovere": dict(ppr="-"),           # dovere 无现在分词
+}
+for _v in VERBS:
+    if _v["i"] in _PPR_PP_FIX:
+        _v.update(_PPR_PP_FIX[_v["i"]])
 
 # 前缀自动计算（base 派生）
 for v in VERBS:
@@ -1031,10 +1113,12 @@ function buildSubjPres(spec){
       out.push(i<3||i===5 ? stem+['isca','isca','isca','','','iscano'][i] : stem+['','','','iamo','iate',''][i]);
     } else if(spec.iare){
       if(i<3){
-        if(ch==='iare_t') out.push(stem+'i');          // 重读：inviare→che io invii
+        if(ch==='iare_t') out.push(stem+'i');          // 重读：inviare→che io invii / odiare→che io odii / variare→che io varii
         else out.push(stem.slice(0,-1)+'i');            // 非重读：studiare→che io studi
       } else {
-        out.push(stem.slice(0,-1)+['iamo','iate','ino'][i-3]);
+        // 3 复数：重读 -iare 保留 i（avviino/inviino/odiino），非重读 -iare 去掉 i（studino/cambino/inizino/varino/ammobilino）
+        if(i===5) out.push((ch==='iare_t')?stem+'ino':stem.slice(0,-1)+'ino');
+        else out.push(stem.slice(0,-1)+['iamo','iate','ino'][i-3]);
       }
     } else {
       out.push(fixSpell(ch,stem,END[t].subj_pres[i]));
@@ -1056,6 +1140,7 @@ function buildFutCond(spec,which){
   if(t==='ire')base=stem+'ir';
   else if(ch==='care'||ch==='gare')base=stem+'her';
   else if(ch==='ciare'||ch==='giare'||ch==='sciare')base=stem.slice(0,-1)+'er';
+  else if(spec.iare)base=(stem.slice(-1)==='i'||/(sc|cc|gg|[cg])$/.test(stem))?stem+'er':stem+'i'+'er';   // -iare 未来/条件式：词干以 c/g/sc/cc/gg 结尾去主题 i（viaggiare→viaggerò / mangiare→mangerò / lasciare→lascerò），其余保留 i（studiare→studierò / raschiare→raschierò）   // 纯 -iare：iniziare(词干inizi)→inizierò / viaggiare→viaggierò / odiare(odi)→odierò / studiare→studierò
   else base=stem+'er';
   var ends = which==='fut' ? ['ò','ai','à','emo','ete','anno'] : ['ei','esti','ebbe','emmo','este','ebbero'];
   return ends.map(function(e){return base+e;});
@@ -1072,7 +1157,7 @@ function buildImp(spec,pres,subj){
   } else if(spec.iare){
     tu=stem.slice(0,-1)+'ia';
     lei = (ch==='iare_t') ? stem.slice(0,-1)+'ii' : stem.slice(0,-1)+'i';   // 重读 invii / 非重读 studi
-    noi=stem.slice(0,-1)+'iamo'; voi=stem.slice(0,-1)+'iate'; loro=stem.slice(0,-1)+'ino';
+    noi=stem.slice(0,-1)+'iamo'; voi=stem.slice(0,-1)+'iate'; loro=(ch==='iare_t')?stem+'ino':stem.slice(0,-1)+'ino';   // 重读 -iare 保留 i（avviino/inviino），非重读去掉 i（studino/varino）
   } else {
     // 命令式 tu：仅 -are 用 'a'（parla），-ere/-ire 与虚拟式 tu 同形（credi/finisci）
     tu = (t==='are') ? stem+'a' : fixSpell(ch,stem,END[t].pres[1]);
@@ -1119,7 +1204,7 @@ function buildBase(v){
   var subj_imperf = fill('subj_imperf', function(){return buildSubjImperf(spec);});
   var gp = buildGerPPRPP(spec);
   var ger = pre(x, (m&&m.ger)?m.ger:gp.ger);
-  var ppr = pre(x, (m&&m.ppr)?m.ppr:gp.ppr);
+  var ppr = pre(x, v.ppr ? v.ppr : (m&&m.ppr)?m.ppr:gp.ppr);
   var pp = v.pp ? pre(x,v.pp) : pre(x,(m&&m.pp)?m.pp:gp.pp);
   // 命令式的 lei/loro 取自 subj_pres；此处传【未前缀化】的 base_subj_pres，
   // 由 fill 统一前缀化一次，避免前缀动词（基形模型缺 imp 时）出现双重前缀（acaccorra）。

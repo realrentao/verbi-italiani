@@ -1,6 +1,7 @@
 # build artifacts
 _engine_test/
 _verify/
+_verify_ref/
 __pycache__/
 *.pyc
 

@@ -32,6 +32,7 @@ def build_data_js():
         verbs_data.append({
             "i": v["i"], "c": v["c"], "aux": v["aux"], "ch": v["ch"],
             "pp": v["pp"], "b": v["b"], "x": v["x"], "bi": v.get("bi", ""), "ir": is_irr,
+            "ppr": v.get("ppr", ""),
         })
     return ("var AVERE=" + json.dumps(AVERE, ensure_ascii=False, separators=(",", ":")) +
             ";\nvar ESSERE=" + json.dumps(ESSERE, ensure_ascii=False, separators=(",", ":")) +
@@ -113,7 +114,7 @@ chk('cominciare','ind_pres',0,'comincio'); chk('cominciare','ind_pres',1,'cominc
 chk('lasciare','ind_pres',0,'lascio'); chk('lasciare','ind_pres',1,'lasci');
 chk('inviare','ind_pres',0,'invio'); chk('inviare','ind_pres',1,'invii'); chk('inviare','ind_pres',4,'inviate'); chk('inviare','imp',1,'invia');
 chk('studiare','ind_pres',0,'studio'); chk('studiare','ind_pres',1,'studi'); chk('studiare','ind_pres',2,'studia'); chk('studiare','subj_pres',1,'studi'); chk('studiare','imp',1,'studia'); chk('studiare','imp',2,'studi');
-chk('odiare','ind_pres',1,'odi'); chk('viaggiare','ind_pres',1,'viaggi'); chk('sbagliare','ind_pres',1,'sbagli');
+chk('odiare','ind_pres',1,'odii'); chk('odiare','subj_pres',0,'odii'); chk('odiare','subj_pres',5,'odino'); chk('viaggiare','ind_pres',1,'viaggi'); chk('sbagliare','ind_pres',1,'sbagli');
 // irregolari completi
 chk('essere','ind_pres',0,'sono'); chk('essere','ind_pres',2,'è'); chk('essere','ind_pres',5,'sono'); chk('essere','ind_remoto',0,'fui'); chk('essere','ind_fut',0,'sarò'); chk('essere','imp',1,'sii');
 chk('avere','ind_pres',0,'ho'); chk('avere','ind_pres',2,'ha'); chk('avere','ind_remoto',0,'ebbi'); chk('avere','imp',1,'abbi');
