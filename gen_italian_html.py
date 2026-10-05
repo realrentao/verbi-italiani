@@ -403,7 +403,7 @@ header .sub .brand{font-size:16px;font-weight:800;letter-spacing:2px;color:#fff;
 
 
 def main_html():
-    _logo_path = os.path.join(HERE, "assets", "logo-weiyi.jpg")
+    _logo_path = os.path.join(HERE, "assets", "logo-piano-small.jpg")
     if os.path.exists(_logo_path):
         with open(_logo_path, "rb") as _f:
             logo_b64 = "data:image/jpeg;base64," + base64.b64encode(_f.read()).decode("ascii")
@@ -422,7 +422,7 @@ def main_html():
 <body>
 <header>
   <h1><span class="flag">🇮🇹</span> 意大利语动词变位表 <span class="flag">Coniugazione dei Verbi</span></h1>
-  <div class="sub"><img class="logo" src="__LOGO__" alt="唯意意大利语"><span class="brand">唯意意大利语</span></div>
+  <div class="sub"><img class="logo" src="__LOGO__" alt="涛子办事处"><span class="brand">涛子办事处</span></div>
   <div class="toprow">
     <input id="search" type="search" placeholder="搜索动词或中文含义…">
     <span id="vcount"></span>
