@@ -336,46 +336,46 @@ UI_JS = r"""
 
 CSS = r"""
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--green:#009246;--red:#CE2B37;--gold:#B8860B;--blue:#1E5AA8;--ink:#2b2723;--sub:#8a837a;--bg:#F7F7F4;--card:#ffffff;--line:#e6e3dc;--irr:#FFF8E6}
+:root{--green:#009246;--red:#CE2B37;--gold:#B8860B;--blue:#1E5AA8;--ink:#2b2723;--sub:#8a837a;--bg:#F7F7F4;--card:#ffffff;--line:#e6e3dc;--irr:#FFF8E6;--radius:20px;--radius-sm:14px;--radius-xs:12px;--shadow:0 6px 20px rgba(0,0,0,.07);--shadow-soft:0 3px 10px rgba(0,0,0,.05)}
 html,body{background:var(--bg);color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif}
-header{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,#009246,#CE2B37);color:#fff;padding:14px 20px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+header{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,#009246,#CE2B37);color:#fff;padding:14px 20px 18px;border-radius:0 0 26px 26px;box-shadow:0 8px 26px rgba(0,0,0,.18)}
 header h1{font-size:20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 header h1 .flag{letter-spacing:2px}
 header .sub{display:flex;align-items:center;gap:10px;margin-top:8px}
-header .sub .logo{height:23px;width:23px;border-radius:6px;object-fit:cover;background:#fff;padding:1px;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+header .sub .logo{height:24px;width:24px;border-radius:10px;object-fit:cover;background:#fff;padding:1px;box-shadow:0 1px 4px rgba(0,0,0,.3)}
 header .sub .brand{font-size:16px;font-weight:800;letter-spacing:2px;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.3)}
 .toprow{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}
-#search{flex:1;min-width:200px;padding:9px 14px;border:none;border-radius:20px;font-size:14px;outline:none}
+#search{flex:1;min-width:200px;padding:11px 16px;border:none;border-radius:999px;font-size:14px;outline:none;box-shadow:0 2px 8px rgba(0,0,0,.12)}
 #vcount{font-size:12px;opacity:.95;white-space:nowrap}
 #idx{display:flex;flex-wrap:wrap;gap:5px;margin:12px 20px 0}
-.idxbtn{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:700;cursor:pointer;font-size:14px}
-.idxbtn:hover{background:var(--gold)}
+.idxbtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:700;cursor:pointer;font-size:14px;transition:transform .12s ease,background .15s ease,box-shadow .15s ease;box-shadow:var(--shadow-soft)}
+.idxbtn:hover{background:var(--gold);transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.12)}
 .idxbtn.off{opacity:.3;cursor:default}
 .idxbtn.act{background:var(--green);color:#fff;border-color:var(--green)}
 .layout{display:grid;grid-template-columns:minmax(330px,400px) minmax(0,1fr);gap:18px;padding:16px 20px 40px;align-items:start;max-width:1720px;margin:0 auto}
 .rcol{min-width:0}
-.vpanel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;max-height:calc(100vh - 170px);overflow:auto;position:sticky;top:150px}
-.vitem{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;cursor:pointer;border-bottom:1px dashed #f0e9dd}
+.vpanel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px;max-height:calc(100vh - 170px);overflow:auto;position:sticky;top:150px;box-shadow:var(--shadow)}
+.vitem{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:var(--radius-xs);cursor:pointer;border-bottom:1px dashed #f0e9dd;transition:background .15s ease,transform .12s ease}
 .vitem:hover{background:#eaf6ee}
-.vitem.sel{background:var(--green);color:#fff}
+.vitem.sel{background:var(--green);color:#fff;border-radius:var(--radius-xs)}
  .vitem.sel .vcn{color:#d8ffe0}
 .vitem.sel .tag.irr{background:rgba(255,255,255,.25);color:#fff}
 .vinf{font-weight:700;font-size:16px}
 .vcn{font-size:13px;color:var(--sub);flex:1}
-.tag{font-size:11px;padding:2px 8px;border-radius:10px;white-space:nowrap}
+.tag{font-size:11px;padding:3px 10px;border-radius:999px;white-space:nowrap;font-weight:600}
 .tag.reg{background:#e6f4ea;color:#1e7a3c}
 .tag.irr{background:var(--irr);color:#b8860b}
 .tag.type{background:#eef2fa;color:var(--blue)}
 .tag.refl{background:#f3e1e6;color:var(--red)}
 .empty{padding:30px;text-align:center;color:var(--sub)}
-#detail{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;min-height:400px}
+#detail{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;min-height:400px;box-shadow:var(--shadow)}
 #vtitle{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px;padding-bottom:14px;border-bottom:2px solid var(--line)}
 #vtitle .big{font-size:32px;font-weight:800;color:var(--green)}
 #vtitle .cn{font-size:17px;color:var(--sub)}
-.mood{margin-bottom:20px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.mood{margin-bottom:20px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft)}
 .mhead{background:var(--mc);color:#fff;padding:11px 16px;font-size:16px}
 .tensegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;padding:14px}
-.tense{background:#fdfbf7;border:1px solid #efe7da;border-radius:10px;padding:10px 12px}
+.tense{background:#fdfbf7;border:1px solid #efe7da;border-radius:var(--radius-sm);padding:11px 14px}
 .tname{display:flex;flex-direction:column;margin-bottom:7px;border-bottom:1px dashed #e5dccd;padding-bottom:6px}
 .tname b{font-size:14.5px}
 .tname i{font-size:12px;color:var(--sub);font-style:normal}
@@ -383,7 +383,7 @@ header .sub .brand{font-size:16px;font-weight:800;letter-spacing:2px;color:#fff;
 .tper{width:100px;color:var(--sub);font-size:13px;padding-top:2px;flex-shrink:0}
 .trow.yo .tform{color:var(--green);font-weight:700}
 .impgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;padding:14px}
-.impcell{background:#fdfbf7;border:1px solid #efe7da;border-radius:10px;padding:14px;text-align:center}
+.impcell{background:#fdfbf7;border:1px solid #efe7da;border-radius:var(--radius-sm);padding:15px;text-align:center}
 .impcell .ilab{display:block;font-size:12px;color:var(--sub);margin-bottom:5px}
 .impcell b{font-size:20px;color:var(--blue)}
 @media(max-width:920px){
