@@ -625,7 +625,7 @@ add(
     V("sovvenire", "援助", aux="a", b="venire"),
     V("contenere", "包含", aux="a", b="tenere"),
     V("mantenere", "保持", aux="a", b="tenere"),
-    V("ottenere", "获得", aux="a", b="tenere", x="ott"),
+    V("ottenere", "获得", aux="a", b="tenere", x="ot"),
     V("ritenere", "认为", aux="a", b="tenere"),
     V("sostenere", "支撑", aux="a", b="tenere"),
     V("appartenere", "属于", aux="e", b="tenere"),
@@ -671,7 +671,7 @@ add(
     V("addurre", "提出", aux="a", b="addurre"),
     V("rivedere", "再看", aux="a", b="vedere"),
     V("prevedere", "预见", aux="a", b="vedere"),
-    V("provvedere", "供应", aux="a", b="vedere", x="provv"),
+    V("provvedere", "供应", aux="a", b="vedere", x="prov"),
     V("intravedere", "瞥见", aux="a", b="vedere"),
     V("descrivere", "描述", aux="a", b="scrivere"),
     V("iscrivere", "登记", aux="a", b="scrivere"),
@@ -769,7 +769,7 @@ add(
 
 # --- 规则 -are ---
 add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
-    ("parlare", "说话"), ("amare", "爱"), ("cantare", "唱歌"), ("ballare", "跳舞"), ("lavorare", "工作"),
+    ("parlare", "说话"), ("amare", "爱"), ("ammobiliare", "布置家具/陈设"), ("cantare", "唱歌"), ("ballare", "跳舞"), ("lavorare", "工作"),
     ("studiare", "学习"), ("comprare", "买"), ("camminare", "走路"), ("guardare", "看"), ("ascoltare", "听"),
     ("copiare", "复制"),
     ("chiamare", "叫/打电话"), ("domandare", "问"), ("aiutare", "帮助"), ("portare", "带"), ("usare", "使用"),
@@ -988,7 +988,7 @@ var END={
  'ire':{pres:['o','i','e','iamo','ite','ono'],imperf:['ivo','ivi','iva','ivamo','ivate','ivano'],remoto:['ii','isti','ì','immo','iste','irono'],subj_pres:['a','a','a','iamo','iate','ano'],subj_imperf:['issi','issi','isse','issimo','iste','issero']}
 };
 function isArr(x){return Object.prototype.toString.call(x)==='[object Array]';}
-function pre(x,f){if(f===undefined||f==='')return f;if(!x)return f;if(f.charAt(0)===x.charAt(x.length-1))return x+f.slice(1);return x+f;}
+function pre(x,f){if(f===undefined||f==='')return f;if(!x)return f;return x+f;}
 function r0(s){return s.slice(0,-1);}
 
 // 拼写修正：-care/-gare 前 i/e 加 h；-ciare/-giare/-sciare 前 i 结尾去 i；-iare_t 保留 i
@@ -1092,10 +1092,10 @@ function buildGerPPRPP(spec){
 // 解析基础变位（支持完全模型 + 半不规则部分模型 + 前缀派生）
 function buildBase(v){
   var refl = v.i.slice(-2)==='si';
-  // 自反动词 v.i 形如 lavarsi；基数原形存于 v.bi（lavare），用于推导 type/stem
-  var baseInf = refl ? (v.bi || v.i.slice(0,-2)) : v.i;
-  // 确定类型与词干：意大利语后缀为 3 字符（-are/-ere/-ire）
   var m = v.b ? MODELS[v.b] : null;
+  // 自反动词 v.i 形如 lavarsi，基数原形存于 v.bi（lavare）。派生动词（v.b 为去前缀基形，如 ac+correre→correre）须用 v.b 作基数，避免前缀叠加成 acaccorro。
+  var baseInf = refl ? (v.bi || v.i.slice(0,-2)) : (v.b ? v.b : v.i);
+  // 确定类型与词干：意大利语后缀为 3 字符（-are/-ere/-ire）
   var type = baseInf.slice(-3);
   var stem = baseInf.slice(0,-3);
   var ch = v.ch;
@@ -1114,13 +1114,16 @@ function buildBase(v){
   var remoto = fill('remoto', function(){return buildRemoto(spec);});
   var fut = fill('fut', function(){return buildFutCond(spec,'fut');});
   var cond = fill('cond', function(){return buildFutCond(spec,'cond');});
-  var subj_pres = fill('subj_pres', function(){return buildSubjPres(spec);});
+  var base_subj_pres = (m && m.subj_pres!==undefined) ? m.subj_pres : buildSubjPres(spec);
+  var subj_pres = fill('subj_pres', function(){return base_subj_pres;});
   var subj_imperf = fill('subj_imperf', function(){return buildSubjImperf(spec);});
   var gp = buildGerPPRPP(spec);
   var ger = pre(x, (m&&m.ger)?m.ger:gp.ger);
   var ppr = pre(x, (m&&m.ppr)?m.ppr:gp.ppr);
   var pp = v.pp ? pre(x,v.pp) : pre(x,(m&&m.pp)?m.pp:gp.pp);
-  var imp = fill('imp', function(){return buildImp(spec,pres,subj_pres);});
+  // 命令式的 lei/loro 取自 subj_pres；此处传【未前缀化】的 base_subj_pres，
+  // 由 fill 统一前缀化一次，避免前缀动词（基形模型缺 imp 时）出现双重前缀（acaccorra）。
+  var imp = fill('imp', function(){return buildImp(spec, pres, base_subj_pres);});
   return {pres:pres,imperf:imperf,remoto:remoto,fut:fut,cond:cond,
           subj_pres:subj_pres,subj_imperf:subj_imperf,imp:imp,
           ger:ger,ppr:ppr,pp:pp,inf:baseInf,aux:v.aux};
