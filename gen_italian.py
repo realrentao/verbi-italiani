@@ -513,6 +513,10 @@ MODELS = {
         fut=["cadrò", "cadrai", "cadrà", "cadremo", "cadrete", "cadranno"],
         cond=["cadrei", "cadresti", "cadrebbe", "cadremmo", "cadreste", "cadrebbero"],
         pp="caduto"),
+    "scadere": dict(remoto=["scaddi", "scadesti", "scadde", "scademmo", "scadeste", "scaddero"],
+        fut=["scadrò", "scadrai", "scadrà", "scadremo", "scadrete", "scadranno"],
+        cond=["scadrei", "scadresti", "scadrebbe", "scadremmo", "scadreste", "scadrebbero"],
+        pp="scaduto"),
     "esprimere": dict(remoto=["espressi", "esprimesti", "espresse", "esprimemmo", "esprimeste", "espressero"], pp="espresso"),
     "comprimere": dict(pres=["comprimo", "comprimi", "comprime", "comprimiamo", "comprimete", "comprimono"],
         subj_pres=["comprima", "comprima", "comprima", "comprimiamo", "comprimiate", "comprimano"],
@@ -800,6 +804,7 @@ add(
     V("succedere", "发生", aux="e", b="succedere"),
     V("accadere", "发生", aux="e", b="accadere"),
     V("cadere", "落下", aux="e", b="cadere"),
+    V("scadere", "到期/过期", aux="e", b="scadere"),
     V("esprimere", "表达", aux="a", b="esprimere"),
     V("spingere", "推", aux="a", b="spingere"),
     V("stringere", "握紧", aux="a", b="stringere"),
@@ -890,7 +895,7 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("tirare", "拉"), ("toccare", "碰", "care"), ("trapiantare", "移植"), ("trascinare", "拖"), ("trascurare", "忽视"),
     ("truccare", "化妆", "care"), ("urlare", "喊"), ("usare", "使用"), ("valicare", "翻越", "care"),
     ("versare", "倒"), ("viaggiare", "旅行"), ("visitare", "参观"), ("viziare", "宠坏"), ("volare", "飞"),
-    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"),
+    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"),
     ("inviare", "发送", "iare_t"), ("avviare", "启动", "iare_t"), ("rinviare", "推迟", "iare_t"), ("spiare", "监视", "iare_t"),
     # --- 稀有字母补充（H/J/K/Q/W/X/Y）---
     ("quadrare", "使成方形/使对齐"), ("qualificare", "使合格/具有资格", "care"),
@@ -1030,6 +1035,7 @@ REFL_BASES = [
     ("diffidare", "提防"), ("accontentare", "满足于"), ("dedicare", "致力于", "care"), ("ferire", "伤到自己"),
     ("fidare", "信任"),
     ("sedere", "就座"), ("muovere", "起身"), ("svegliare", "醒"), ("alzare", "起身"), ("vestire", "穿衣"),
+    ("trattenere", "克制(自己)/保留"),
 ]
 
 reflexive_entries = []
