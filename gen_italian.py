@@ -916,7 +916,7 @@ add(V("odiare", "憎恨", aux="a", b="odiare"),
 # --- 规则 -ere ---
 add(*[V(w[0], w[1], w[3] if len(w) > 3 else "a", w[2] if len(w) > 2 else "", b=w[4] if len(w) > 4 else "") for w in [
     ("temere", "害怕"), ("credere", "相信"), ("ricevere", "收到"), ("vendere", "卖"), ("battere", "击打"),
-    ("ripetere", "重复"), ("tessere", "编织"), ("premere", "按压"), ("cedere", "让步"), ("splendere", "发光"),
+    ("ripetere", "重复"), ("tessere", "编织"), ("premere", "按压"), ("spremere", "挤压/榨取"), ("cedere", "让步"), ("splendere", "发光"),
     ("pendere", "悬挂", "", "a", "pendere"), ("assistere", "出席"), ("esistere", "存在", "", "e"), ("consistere", "在于", "", "e"),
     ("insistere", "坚持"), ("resistere", "抵抗"), ("sorridere", "微笑", "", "a", "sorridere"), ("mietere", "收割"), ("concedere", "授予", "", "a", "concedere"),
     ("procedere", "进行", "", "e"), ("eccedere", "超过"), ("possedere", "拥有", "", "a", "possedere"), ("ardere", "燃烧", "", "a", "ardere"), ("riflettere", "反射/思考", "", "a", "riflettere"),
