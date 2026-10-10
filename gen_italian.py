@@ -895,7 +895,7 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("tirare", "拉"), ("toccare", "碰", "care"), ("trapiantare", "移植"), ("trascinare", "拖"), ("trascurare", "忽视"),
     ("truccare", "化妆", "care"), ("urlare", "喊"), ("usare", "使用"), ("valicare", "翻越", "care"),
     ("versare", "倒"), ("viaggiare", "旅行"), ("visitare", "参观"), ("viziare", "宠坏"), ("volare", "飞"),
-    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"),
+    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"), ("discordare", "不和谐/不一致"),
     ("inviare", "发送", "iare_t"), ("avviare", "启动", "iare_t"), ("rinviare", "推迟", "iare_t"), ("spiare", "监视", "iare_t"),
     # --- 稀有字母补充（H/J/K/Q/W/X/Y）---
     ("quadrare", "使成方形/使对齐"), ("qualificare", "使合格/具有资格", "care"),
