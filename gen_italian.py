@@ -483,6 +483,18 @@ MODELS = {
     "correre": dict(remoto=["corsi", "corresti", "corse", "corremmo", "correste", "corsero"], pp="corso"),
     "perdere": dict(remoto=["persi", "perdesti", "perse", "perdemmo", "perdeste", "persero"], pp="perso"),
     "mettere": dict(remoto=["misi", "mettesti", "mise", "mettemmo", "metteste", "misero"], pp="messo"),
+    "accorgere": dict(
+        pres=["accorgo", "accorgi", "accorge", "accorgiamo", "accorgete", "accorgono"],
+        remoto=["accorsi", "accorgesti", "accorse", "accorgemmo", "accorgeste", "accorsero"],
+        pp="accorto",
+        fut=["accorgerò", "accorgerai", "accorgerà", "accorgeremo", "accorgerete", "accorgeranno"],
+        cond=["accorgerei", "accorgeresti", "accorgerebbe", "accorgeremmo", "accorgeste", "accorgerebbero"],
+        subj_pres=["accorga", "accorga", "accorga", "accorgiamo", "accorgiate", "accorgano"],
+    ),
+    "uccidere": dict(
+        remoto=["uccisi", "uccidesti", "uccise", "uccidemmo", "uccideste", "uccisero"],
+        pp="ucciso",
+    ),
     "emettere": dict(remoto=["emisi", "emettesti", "emise", "emettemmo", "emetteste", "emisero"], pp="emesso"),
     "ardere": dict(remoto=["arsi", "ardesti", "arse", "ardemmo", "ardeste", "arsero"], pp="arso"),
     "vivere": dict(remoto=["vissi", "vivesti", "visse", "vivemmo", "viveste", "vissero"],
@@ -652,6 +664,7 @@ add(V("essere", "是", aux="e", b="essere"),
     V("trarre", "拉/得出", aux="a", b="trarre"),
     V("condurre", "带领", aux="a", b="condurre"),
     V("cogliere", "采摘", aux="a", b="cogliere"),
+    V("raccogliere", "收集", aux="a", b="cogliere"),
     V("scegliere", "选择", aux="a", b="scegliere"),
     V("togliere", "拿走", aux="a", b="togliere"),
     V("sciogliere", "溶解", aux="a", b="sciogliere"),
@@ -659,6 +672,7 @@ add(V("essere", "是", aux="e", b="essere"),
     V("valere", "值得", aux="e", b="valere"),
     V("parere", "似乎", aux="e", b="parere"),
     V("piacere", "喜欢", aux="e", b="piacere"),
+    V("accorgere", "察觉", aux="e", b="accorgere"),
     V("tacere", "沉默", aux="a", b="tacere"),
     V("giacere", "躺", aux="a", b="giacere"),
     V("nuocere", "伤害", aux="a", b="nuocere"),
@@ -784,6 +798,8 @@ add(
     V("correre", "跑", aux="e", b="correre"),
     V("perdere", "失去", aux="a", b="perdere"),
     V("mettere", "放", aux="a", b="mettere"),
+    V("proteggere", "保护", aux="a", b="proteggere"),
+    V("dimettere", "卸任/辞退", aux="a", b="mettere"),
     V("vivere", "生活", aux="a", b="vivere"),
     V("nascere", "出生", aux="e", b="nascere"),
     V("conoscere", "认识", aux="a", b="conoscere"),
@@ -895,7 +911,7 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("tirare", "拉"), ("toccare", "碰", "care"), ("trapiantare", "移植"), ("trascinare", "拖"), ("trascurare", "忽视"),
     ("truccare", "化妆", "care"), ("urlare", "喊"), ("usare", "使用"), ("valicare", "翻越", "care"),
     ("versare", "倒"), ("viaggiare", "旅行"), ("visitare", "参观"), ("viziare", "宠坏"), ("volare", "飞"),
-    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"), ("discordare", "不和谐/不一致"),
+    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"), ("discordare", "不和谐/不一致"), ("innamorare", "爱上"), ("laureare", "毕业"), ("rilassare", "放松"), ("annoiare", "厌烦", "iare_t"), ("vergognare", "羞愧"), ("addormentare", "入睡"), ("ammalare", "生病"), ("accontentare", "满足于"), ("fidanzare", "订婚"), ("spogliare", "脱衣/剥夺"), ("licenziare", "解雇"), ("diplomare", "使毕业"), ("imparare", "学习"), ("sussurrare", "低语"), ("ritrovare", "重新找到"), ("dubitare", "怀疑"),
     ("inviare", "发送", "iare_t"), ("avviare", "启动", "iare_t"), ("rinviare", "推迟", "iare_t"), ("spiare", "监视", "iare_t"),
     # --- 稀有字母补充（H/J/K/Q/W/X/Y）---
     ("quadrare", "使成方形/使对齐"), ("qualificare", "使合格/具有资格", "care"),
@@ -916,7 +932,7 @@ add(V("odiare", "憎恨", aux="a", b="odiare"),
 # --- 规则 -ere ---
 add(*[V(w[0], w[1], w[3] if len(w) > 3 else "a", w[2] if len(w) > 2 else "", b=w[4] if len(w) > 4 else "") for w in [
     ("temere", "害怕"), ("credere", "相信"), ("ricevere", "收到"), ("vendere", "卖"), ("battere", "击打"),
-    ("ripetere", "重复"), ("tessere", "编织"), ("premere", "按压"), ("spremere", "挤压/榨取"), ("cedere", "让步"), ("splendere", "发光"),
+    ("ripetere", "重复"), ("tessere", "编织"), ("premere", "按压"), ("spremere", "挤压/榨取"), ("uccidere", "杀死", "", "a", "uccidere"), ("cedere", "让步"), ("splendere", "发光"),
     ("pendere", "悬挂", "", "a", "pendere"), ("assistere", "出席"), ("esistere", "存在", "", "e"), ("consistere", "在于", "", "e"),
     ("insistere", "坚持"), ("resistere", "抵抗"), ("sorridere", "微笑", "", "a", "sorridere"), ("mietere", "收割"), ("concedere", "授予", "", "a", "concedere"),
     ("procedere", "进行", "", "e"), ("eccedere", "超过"), ("possedere", "拥有", "", "a", "possedere"), ("ardere", "燃烧", "", "a", "ardere"), ("riflettere", "反射/思考", "", "a", "riflettere"),
@@ -1036,6 +1052,9 @@ REFL_BASES = [
     ("fidare", "信任"),
     ("sedere", "就座"), ("muovere", "起身"), ("svegliare", "醒"), ("alzare", "起身"), ("vestire", "穿衣"),
     ("trattenere", "克制(自己)/保留"),
+    ("fidanzare", "订婚"), ("spogliare", "脱衣/剥夺"), ("licenziare", "解雇"), ("diplomare", "使毕业"),
+    ("trasferire", "搬迁/转学"), ("truccare", "化妆"), ("volere", "想要"), ("piacere", "喜欢"),
+    ("aspettare", "等待"), ("domandare", "询问"), ("dimettere", "卸任/辞退"),
 ]
 
 reflexive_entries = []
@@ -1052,7 +1071,7 @@ for item in REFL_BASES:
                ch=(ch_override if ch_override is not None else basev["ch"]),
                pp=basev["pp"], b=basev["b"],
                x=basev["x"], rem=list(basev["rem"]), fut=basev["fut"], ppr=basev["ppr"],
-               bi=base)
+               bi=(basev["b"] if basev["x"] else base))
     reflexive_entries.append(refl_v)
     seen.add(refl_i)
 
