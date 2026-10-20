@@ -650,6 +650,7 @@ add(V("essere", "是", aux="e", b="essere"),
     V("bere", "喝", aux="a", b="bere"),
     V("sapere", "知道", aux="a", b="sapere"),
     V("volere", "想要", aux="a", b="volere"),
+    V("volerci", "需要/花费(时间)", aux="e", b="volere", x="ci "),
     V("dovere", "必须", aux="a", b="dovere"),
     V("potere", "能够", aux="a", b="potere"),
     V("venire", "来", aux="e", b="venire"),
@@ -753,6 +754,7 @@ add(
     V("soccorrere", "救助", aux="a", b="correre"),
     V("scorrere", "流动", aux="e", b="correre"),
     V("trascorrere", "度过", aux="a", b="correre"),
+    V("occorrere", "发生/需要", aux="e", b="correre"),
     V("decrescere", "减少", aux="e", b="crescere"),
     V("riconoscere", "认出", aux="a", b="conoscere"),
     V("disconoscere", "否认", aux="a", b="conoscere"),
@@ -912,7 +914,7 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("tirare", "拉"), ("toccare", "碰", "care"), ("trapiantare", "移植"), ("trascinare", "拖"), ("trascurare", "忽视"),
     ("truccare", "化妆", "care"), ("urlare", "喊"), ("usare", "使用"), ("valicare", "翻越", "care"),
     ("versare", "倒"), ("viaggiare", "旅行"), ("visitare", "参观"), ("viziare", "宠坏"), ("volare", "飞"),
-    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"), ("discordare", "不和谐/不一致"), ("divietare", "禁止/不许"), ("consolare", "安慰"), ("raffigurare", "描绘/表现"), ("smontare", "拆卸/下车"), ("innamorare", "爱上"), ("laureare", "毕业"), ("rilassare", "放松"), ("annoiare", "厌烦", "iare_t"), ("vergognare", "羞愧"), ("addormentare", "入睡"), ("ammalare", "生病"), ("accontentare", "满足于"), ("fidanzare", "订婚"), ("spogliare", "脱衣/剥夺"), ("licenziare", "解雇"), ("diplomare", "使毕业"), ("imparare", "学习"), ("sussurrare", "低语"), ("ritrovare", "重新找到"), ("dubitare", "怀疑"), ("sfregare", "擦/摩擦", "gare"),
+    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"), ("discordare", "不和谐/不一致"), ("divietare", "禁止/不许"), ("consolare", "安慰"), ("raffigurare", "描绘/表现"), ("smontare", "拆卸/下车"), ("innamorare", "爱上"), ("laureare", "毕业"), ("rilassare", "放松"), ("annoiare", "厌烦", "iare_t"), ("vergognare", "羞愧"), ("addormentare", "入睡"), ("ammalare", "生病"), ("accontentare", "满足于"), ("fidanzare", "订婚"), ("spogliare", "脱衣/剥夺"), ("licenziare", "解雇"), ("diplomare", "使毕业"), ("imparare", "学习"), ("sussurrare", "低语"), ("ritrovare", "重新找到"), ("dubitare", "怀疑"), ("sfregare", "擦/摩擦", "gare"), ("scarabocchiare", "涂鸦"), ("scoppiare", "爆炸/爆发"), ("legare", "绑/捆", "gare"),
     ("inviare", "发送", "iare_t"), ("avviare", "启动", "iare_t"), ("rinviare", "推迟", "iare_t"), ("spiare", "监视", "iare_t"),
     # --- 稀有字母补充（H/J/K/Q/W/X/Y）---
     ("quadrare", "使成方形/使对齐"), ("qualificare", "使合格/具有资格", "care"),
@@ -970,8 +972,9 @@ add(*[V(w[0], w[1], "a", "isc") for w in [
     ("chiarire", "澄清"), ("stabilire", "建立"), ("definire", "定义"), ("gestire", "管理"), ("sparire", "消失"),
     ("unire", "联合"), ("arricchire", "致富"), ("approfondire", "深化"), ("preferire", "偏好"), ("finire", "完成"),
     ("obbedire", "服从"), ("esibire", "展示"), ("impazzire", "发疯", "", "e"), ("rinfrescire", "使清新"), ("sminuire", "贬低"),
-    ("trasferire", "转移"), ("diminuire", "减少"), ("spedire", "寄"), ("colpire", "击中"), ("fornire", "提供"),
+    ("trasferire", "转移"), ("diminuire", "减少"), ("spedire", "寄"), ("colpire", "击中"),     ("fornire", "提供"),
 ]])
+add(V("incuriosire", "使好奇", aux="a", ch="isc"))
 
 # --- apparire 家族（不完全规则，模型已定义）---
 add(V("apparire", "出现", aux="e", b="apparire"),
