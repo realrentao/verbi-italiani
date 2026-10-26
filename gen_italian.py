@@ -218,8 +218,8 @@ MODELS = {
     "udire": dict(pres=["odo", "odi", "ode", "udiamo", "udite", "odono"],
         imperf=["udivo", "udivi", "udiva", "udivamo", "udivate", "udivano"],
         remoto=["udii", "udisti", "udì", "udimmo", "udiste", "udirono"],
-        fut=["udrò", "udrai", "udrà", "udremo", "udrete", "udranno"],
-        cond=["udrei", "udresti", "udrebbe", "udremmo", "udreste", "udrebbero"],
+        fut=["udirò", "udirai", "udirà", "udiremo", "udirete", "udiranno"],
+        cond=["udirei", "udiresti", "udirebbe", "udiremmo", "udireste", "udirebbero"],
         subj_pres=["oda", "oda", "oda", "udiamo", "udiate", "odano"],
         subj_imperf=["udissi", "udissi", "udisse", "udissimo", "udiste", "udissero"],
         imp=["", "odi", "oda", "udiamo", "udite", "odano"],
@@ -488,7 +488,7 @@ MODELS = {
         remoto=["accorsi", "accorgesti", "accorse", "accorgemmo", "accorgeste", "accorsero"],
         pp="accorto",
         fut=["accorgerò", "accorgerai", "accorgerà", "accorgeremo", "accorgerete", "accorgeranno"],
-        cond=["accorgerei", "accorgeresti", "accorgerebbe", "accorgeremmo", "accorgeste", "accorgerebbero"],
+        cond=["accorgerei", "accorgeresti", "accorgerebbe", "accorgeremmo", "accorgereste", "accorgerebbero"],
         subj_pres=["accorga", "accorga", "accorga", "accorgiamo", "accorgiate", "accorgano"],
     ),
     "uccidere": dict(
@@ -848,14 +848,14 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("copiare", "复制"),
     ("chiamare", "叫/打电话"), ("domandare", "问"), ("aiutare", "帮助"), ("portare", "带"), ("usare", "使用"),
     ("aspettare", "等待"), ("trovare", "找到"), ("pagare", "付钱", "gare"), ("arrivare", "到达", "", "e"),
-    ("nuotare", "游泳"), ("viaggiare", "旅行"), ("cucinare", "做饭"), ("insegnare", "教"), ("cenare", "吃晚饭"),
+    ("nuotare", "游泳"), ("cucinare", "做饭"), ("insegnare", "教"), ("cenare", "吃晚饭"),
     ("visitare", "参观"), ("preparare", "准备"), ("festeggiare", "庆祝", "giare"), ("salvare", "拯救"), ("lavare", "洗"),
     ("mandare", "寄"), ("passare", "经过", "", "e"), ("saltare", "跳"), ("trattare", "处理"), ("accompagnare", "陪伴"),
     ("abbassare", "降低"), ("baciare", "吻", "ciare"), ("cancellare", "取消"), ("brillare", "发光"), ("cambiare", "改变"),
     ("chiacchierare", "聊天"), ("commentare", "评论"), ("creare", "创造"), ("coltivare", "耕种"), ("lasciare", "留下", "sciare"),
     ("disegnare", "画"), ("entrare", "进入", "", "e"), ("spiegare", "解释", "gare"), ("firmare", "签名"),
     ("galleggiare", "漂浮", "giare"), ("formare", "形成"), ("funzionare", "运转"), ("gridare", "喊叫"), ("abitare", "居住"),
-    ("ignorare", "忽视"), ("tentare", "试图"), ("inventare", "发明"), ("limitare", "限制"), ("riempire", "填满", "isc"),
+    ("ignorare", "忽视"), ("tentare", "试图"), ("inventare", "发明"), ("limitare", "限制"),
     ("lottare", "斗争"), ("segnare", "标记"), ("migliorare", "改善"), ("mescolare", "混合"), ("raccontare", "讲述"),
     ("notare", "注意"), ("occupare", "占据"), ("dimenticare", "忘记", "care"), ("operare", "操作"), ("fermare", "停"),
     ("pettinare", "梳"), ("bruciare", "燃烧", "ciare"), ("pregare", "祈祷", "gare"), ("ruotare", "旋转"), ("separare", "分开"),
@@ -914,7 +914,7 @@ add(*[V(w[0], w[1], "a", w[2] if len(w) > 2 else "") for w in [
     ("tirare", "拉"), ("toccare", "碰", "care"), ("trapiantare", "移植"), ("trascinare", "拖"), ("trascurare", "忽视"),
     ("truccare", "化妆", "care"), ("urlare", "喊"), ("usare", "使用"), ("valicare", "翻越", "care"),
     ("versare", "倒"), ("viaggiare", "旅行"), ("visitare", "参观"), ("viziare", "宠坏"), ("volare", "飞"),
-    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"), ("discordare", "不和谐/不一致"), ("divietare", "禁止/不许"), ("consolare", "安慰"), ("raffigurare", "描绘/表现"), ("smontare", "拆卸/下车"), ("innamorare", "爱上"), ("laureare", "毕业"), ("rilassare", "放松"), ("annoiare", "厌烦", "iare_t"), ("vergognare", "羞愧"), ("addormentare", "入睡"), ("ammalare", "生病"), ("accontentare", "满足于"), ("fidanzare", "订婚"), ("spogliare", "脱衣/剥夺"), ("licenziare", "解雇"), ("diplomare", "使毕业"), ("imparare", "学习"), ("sussurrare", "低语"), ("ritrovare", "重新找到"), ("dubitare", "怀疑"), ("sfregare", "擦/摩擦", "gare"), ("scarabocchiare", "涂鸦"), ("scoppiare", "爆炸/爆发"), ("legare", "绑/捆", "gare"), ("squagliare", "融化/熔化"), ("sghignazzare", "嗤笑/嘲笑"), ("raggruppare", "分组/聚集"),
+    ("affermare", "断言/声明"), ("agevolare", "使便利/促进"), ("optare", "选择/抉择"), ("perfezionare", "使完善/改进"), ("scongiurare", "恳求/祈祷"), ("acquistare", "购买/获得"), ("ricaricare", "充值/再装载", "care"), ("compilare", "填写/编译"), ("rinnovare", "续期/更新"), ("squadrare", "审视/使成方形"), ("discordare", "不和谐/不一致"), ("divietare", "禁止/不许"), ("consolare", "安慰"), ("raffigurare", "描绘/表现"), ("smontare", "拆卸/下车"), ("innamorare", "爱上"), ("laureare", "毕业"), ("rilassare", "放松"), ("annoiare", "厌烦", "iare_t"), ("vergognare", "羞愧"), ("addormentare", "入睡"), ("ammalare", "生病"), ("accontentare", "满足于"), ("fidanzare", "订婚"), ("spogliare", "脱衣/剥夺"), ("licenziare", "解雇"), ("diplomare", "使毕业"), ("imparare", "学习"), ("sussurrare", "低语"), ("ritrovare", "重新找到"), ("dubitare", "怀疑"), ("sfregare", "擦/摩擦", "gare"), ("scarabocchiare", "涂鸦"), ("scoppiare", "爆炸/爆发"), ("legare", "绑/捆", "gare"), ("squagliare", "融化/熔化"), ("sghignazzare", "嗤笑/嘲笑"), ("raggruppare", "分组/聚集"), ("prestare", "借出"), ("guadagnare", "赚钱"), ("spostare", "移动"), ("diventare", "变成"), ("osare", "敢于"), ("interessare", "使感兴趣"), ("coccolare", "宠爱"), ("indebitare", "使负债"), ("rateizzare", "分期付款"), ("sporcare", "弄脏"), ("scovare", "找出/发现"), ("frugare", "翻找"), ("piegare", "折叠/弯腰"), ("lamentare", "抱怨"), ("lagnare", "抱怨"), ("ripagare", "偿还", "gare"), ("parcheggiare", "停车", "giare"),
     ("inviare", "发送", "iare_t"), ("avviare", "启动", "iare_t"), ("rinviare", "推迟", "iare_t"), ("spiare", "监视", "iare_t"),
     # --- 稀有字母补充（H/J/K/Q/W/X/Y）---
     ("quadrare", "使成方形/使对齐"), ("qualificare", "使合格/具有资格", "care"),
@@ -950,18 +950,18 @@ add(*[V(w[0], w[1], "a") for w in [
     ("fuggire", "逃跑", "", "e"), ("vestire", "穿衣"), ("bollire", "煮沸"), ("divertire", "使娱乐"), ("avvertire", "警告"),
     ("consentire", "同意"), ("dissentire", "不同意"), ("assentire", "赞同"), ("presentire", "预感"), ("risentire", "怨恨"),
     ("convertire", "转换"), ("invertire", "颠倒"), ("pervertire", "败坏"), ("sovvertire", "颠覆"), ("inseguire", "追赶"),
-    ("conseguire", "获得"), ("perseguire", "追求"), ("proseguire", "继续"), ("mentire", "撒谎"), ("pentire", "使后悔"),
+    ("conseguire", "获得"), ("perseguire", "追求"), ("proseguire", "继续"), ("mentire", "撒谎"), ("pentire", "使后悔"), ("eseguire", "执行"), ("assorbire", "吸收"),
     ("nutrire", "喂养"), ("avvertire", "告知"), ("divertire", "娱乐"), ("seguire", "跟随"),
 ]])
 
 # --- 规则 -ire（-isc 插入）---
 add(*[V(w[0], w[1], "a", "isc") for w in [
-    ("finire", "结束"), ("capire", "理解"), ("preferire", "更喜欢"), ("pulire", "清洁"), ("spedire", "寄送"),
+    ("riempire", "填满"), ("intuire", "直觉"), ("finire", "结束"), ("capire", "理解"), ("preferire", "更喜欢"), ("pulire", "清洁"), ("spedire", "寄送"),
     ("costruire", "建造"), ("fornire", "提供"), ("garantire", "保证"), ("colpire", "击中"), ("unire", "联合"),
     ("riunire", "聚集"), ("punire", "惩罚"), ("sparire", "消失", "", "e"), ("arricchire", "使富裕"), ("impoverire", "使贫穷"),
     ("ingrandire", "扩大"), ("diminuire", "减少"), ("contribuire", "贡献"), ("distribuire", "分配"), ("attribuire", "归因"),
-    ("eseguire", "执行"), ("stupire", "使惊讶"), ("fiorire", "开花", "", "e"), ("trasferire", "转移"), ("riferire", "报告"),
-    ("suggerire", "建议"), ("inserire", "插入"), ("ferire", "伤害"), ("assorbire", "吸收"), ("favorire", "有利于"),
+    ("stupire", "使惊讶"), ("fiorire", "开花", "", "e"), ("trasferire", "转移"), ("riferire", "报告"),
+    ("suggerire", "建议"), ("inserire", "插入"), ("ferire", "伤害"), ("favorire", "有利于"),
     ("approfondire", "深化"), ("inghiottire", "吞"), ("istruire", "教导"), ("costituire", "构成"), ("sostituire", "替代"),
     ("restituire", "归还"), ("proibire", "禁止"), ("reagire", "反应"), ("guarire", "痊愈", "", "e"), ("impedire", "阻止"),
     ("patire", "遭受"), ("gradire", "乐意"), ("marcire", "腐烂"), ("abbellire", "美化"), ("ingiallire", "变黄"),
@@ -1053,7 +1053,7 @@ REFL_BASES = [
     ("preoccupare", "担心"), ("vergognare", "羞愧"), ("addormentare", "入睡"), ("ammalare", "生病"),
     ("sbagliare", "犯错"), ("affrettare", "赶快"), ("ritirare", "撤退"), ("allenare", "训练"),
     ("diffidare", "提防"), ("accontentare", "满足于"), ("dedicare", "致力于", "care"), ("ferire", "伤到自己"),
-    ("fidare", "信任"),
+    ("fidare", "信任"), ("guardare", "看守/照看"), ("asciugare", "擦干(自己)"), ("provare", "试穿/尝试"), ("spostare", "移动(自己)"), ("frugare", "翻找(自己)"), ("piegare", "弯腰/折叠(自己)"), ("lagnare", "抱怨"),
     ("sedere", "就座"), ("muovere", "起身"), ("svegliare", "醒"), ("alzare", "起身"), ("vestire", "穿衣"),
     ("trattenere", "克制(自己)/保留"),
     ("fidanzare", "订婚"), ("spogliare", "脱衣/剥夺"), ("licenziare", "解雇"), ("diplomare", "使毕业"), ("sfregare", "擦(自己)/摩擦"),
@@ -1170,7 +1170,7 @@ function buildFutCond(spec,which){
   if(t==='ire')base=stem+'ir';
   else if(ch==='care'||ch==='gare')base=stem+'her';
   else if(ch==='ciare'||ch==='giare'||ch==='sciare')base=stem.slice(0,-1)+'er';
-  else if(spec.iare)base=(stem.slice(-1)==='i'||/(sc|cc|gg|[cg])$/.test(stem))?stem+'er':stem+'i'+'er';   // -iare 未来/条件式：词干以 c/g/sc/cc/gg 结尾去主题 i（viaggiare→viaggerò / mangiare→mangerò / lasciare→lascerò），其余保留 i（studiare→studierò / raschiare→raschierò）   // 纯 -iare：iniziare(词干inizi)→inizierò / viaggiare→viaggierò / odiare(odi)→odierò / studiare→studierò
+  else if(spec.iare)base=(stem.slice(-2)==='gi')?stem.slice(0,-1)+'er':((stem.slice(-1)==='i'||/(sc|cc|gg|[cg])$/.test(stem))?stem+'er':stem+'i'+'er');  // -iare 未来/条件式：viaggiare(词干viaggi,末尾gi)→viaggerò（去主题 i）；其余末尾 i 保留（studiare→studierò / odiare→odierò / iniziare→inizierò）
   else base=stem+'er';
   var ends = which==='fut' ? ['ò','ai','à','emo','ete','anno'] : ['ei','esti','ebbe','emmo','este','ebbero'];
   return ends.map(function(e){return base+e;});
@@ -1198,7 +1198,8 @@ function buildImp(spec,pres,subj){
 function buildGerPPRPP(spec){
   var t=spec.type,stem=spec.stem,ch=spec.ch;
   var ger,pp,ppr;
-  if(t==='are'){ger=stem+'ando';pp=stem+'ato';ppr=stem+'ante';}
+  if(ch==='isc'){ger=stem+'iendo';pp=stem+'ito';ppr=stem+'ente';}
+  else if(t==='are'){ger=stem+'ando';pp=stem+'ato';ppr=stem+'ante';}
   else if(t==='ere'){ger=stem+'endo';pp=stem+'uto';ppr=stem+'ente';}
   else {ger=stem+'endo';pp=stem+'ito';ppr=stem+'ente';}
   return {ger:ger,pp:pp,ppr:ppr};
